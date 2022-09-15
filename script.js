@@ -3,15 +3,23 @@
 
 var peso = Number(prompt("Digite o seu peso"))
 var altura = Number(prompt("Digite o sua altura"))
-var result
+var imc
 
-function calcImc(){
-    var imc = peso/(altura**2);//formula de imc
-    return imc
-    
+function calcImc(){ 
+    imc = (peso/(altura**2)); //formula de imc
+
+    if(imc<18.0){
+        return alert(`Seu IMC è: ${imc.toFixed(2)}\nVocê está abaixo do peso ideal!`);
+    }
+    else if(imc>=18.0 && imc<=24.9){
+        return alert(`Seu IMC è: ${imc.toFixed(2)}\nVocê está no peso ideal!`);
+    }
+    else{
+        return alert(`Seu IMC è: ${imc.toFixed(2)}\nVocê está acima do peso ideal!`);
+    }
 }
+calcImc()
 
-alert(`Seu IMC è: ${calcImc().toFixed(2)}`);
 
 
 
