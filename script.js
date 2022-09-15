@@ -5,9 +5,13 @@ var peso = Number(prompt("Digite o seu peso"))
 var altura = Number(prompt("Digite o sua altura"))
 var result
 
-function imc(){
-    return peso/(altura**2);//formula de imc
+function calcImc(){
+    var imc = peso/(altura**2);//formula de imc
+    return imc
+    
 }
 
-alert(`Seu IMC è: ${imc().toFixed(2)}`);
+alert(`Seu IMC è: ${calcImc().toFixed(2)}`);
+
+
 
